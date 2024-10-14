@@ -4,7 +4,7 @@ import Input from "./Input";
 import Button from "./Button";
 
 // TODO: Replace with your own publishable key
-const stripeLoadedPromise = loadStripe("PK_REPLACE_WITH_YOUR_PUBLISHABLE_KEY");
+const stripeLoadedPromise = loadStripe("pk_test_51HsqkCGuhXEITAut89vmc4jtjYd7XPs8hWfo2XPef15MFqI8rCFc8NqQU9WutlUBsd8kmNqHBeEmSrdMMpeEEyfT00KzeVdate");
 
 export default function Cart({ cart }) {
   const totalPrice = cart.reduce(
@@ -26,8 +26,8 @@ export default function Cart({ cart }) {
         .redirectToCheckout({
           lineItems: lineItems,
           mode: "payment",
-          successUrl: "https://superm.react-tutorial.app/",
-          cancelUrl: "https://superm.react-tutorial.app/",
+          successUrl: "https://curious-entremet-b9caca.netlify.app",
+          cancelUrl: "https://curious-entremet-b9caca.netlify.app",
           customerEmail: email,
         })
         .then((response) => {
